@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_juegos",
+  "info": {
+    "singularName": "video-juego",
+    "pluralName": "video-juegos",
+    "displayName": "VideoJuego"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "precio": {
+      "type": "integer"
+    },
+    "imagen": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "nombre"
+    }
+  }
+}
